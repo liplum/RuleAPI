@@ -1,11 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <OutputType>Library</OutputType>
+    <UseWPF>true</UseWPF>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Liplum</Authors>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <PackageId>RuleAPI</PackageId>
     <RepositoryUrl>https://github.com/liplum/RuleAPI</RepositoryUrl>
     <PackageDescription>The API of Rule.</PackageDescription>
