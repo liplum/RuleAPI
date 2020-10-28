@@ -5,6 +5,9 @@ using System.Windows;
 
 namespace RuleAPI
 {
+    /// <summary>
+    /// Implement this interface.It's used to generate a string,which is a part of the file's new name,via the process you programmed.
+    /// </summary>
     public interface IRule
     {
         /// <summary>
@@ -35,11 +38,17 @@ namespace RuleAPI
         /// <exception cref="ArgumentNullException">If the resourcesManager is null.</exception>
         void SetResourcesManager(IResourcesManager resourcesManager);
         /// <summary>
-        /// Initializing this rule.It should be called after the <code>GetFuntionArea()</code> but before <code>GetFuntionArea()</code> .It can do something about Initialize the component.
+        /// Initializing this rule.It should be called after the <see cref="SetResourcesManager"/> but before <see cref="GetFuntionArea"/> .It can do something about Initialize the component.
         /// </summary>
         /// <exception cref="InitializationException"></exception>
         void Initialize();
+        /// <summary>
+        /// Whether this rule objcet has already <see cref="Initialize">Initialize</see>.
+        /// </summary>
+        bool Initialized { get; }
     }
+
+#pragma warning disable CS1591 
 
     /// <summary>
     /// If this rule needs intialization but not do it.
@@ -124,4 +133,6 @@ namespace RuleAPI
           SerializationInfo info,
           StreamingContext context) : base(info, context) { }
     }
+#pragma warning restore CS1591
+
 }

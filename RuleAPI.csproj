@@ -5,11 +5,16 @@
     <OutputType>Library</OutputType>
     <UseWPF>true</UseWPF>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Authors>Liplum</Authors>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PackageId>RuleAPI</PackageId>
     <RepositoryUrl>https://github.com/liplum/RuleAPI</RepositoryUrl>
     <PackageDescription>The API of Rule.</PackageDescription>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
 </Project>

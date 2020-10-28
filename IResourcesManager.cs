@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace RuleAPI
 {
+    /// <summary>
+    /// Implement this interface.It need to be inject into the <see cref="IRule"/> object,it'll use this to get the localized string.
+    /// </summary>
     public interface IResourcesManager
     {
         /// <summary>
